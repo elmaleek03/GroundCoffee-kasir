@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Feb 2021 pada 12.51
+-- Waktu pembuatan: 09 Feb 2021 pada 08.00
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.4
 
@@ -118,7 +118,6 @@ CREATE TABLE `kasir` (
 --
 
 INSERT INTO `kasir` (`id`, `kode_kasir`, `nama_kasir`, `username_kasir`, `password_kasir`) VALUES
-(3, '18104040', 'Sulthon', 'sulthon', 'sulthon'),
 (4, '18104032', 'Fahmi Nur Baihaqi', 'fahmiNB', 'fahmiNB'),
 (5, '0001', 'kasir', 'kasir', 'kasir');
 
