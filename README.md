@@ -70,5 +70,3 @@ NAMA :
 PROGRAM STUDI S1 SOFTWARE ENGINEERING FAKULTAS INFORMATIKA
 INSTITUT TEKNOLOGI TELKOM PURWOKERTO 2021
 ### Refrensi dari :
-
-Fakhrul Fanani Nugroho siswa Kelas 12 Jurusan Teknik Komputer Informatika di SMK Negeri 1 Wanareja. https://www.instagram.com/nugrohospace/
