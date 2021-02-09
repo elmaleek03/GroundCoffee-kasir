@@ -1,5 +1,9 @@
 # Aplikasi Penjualan Dengan Framework CodeIgniter 3 & Template SB Admin 2
 
+### Link :
+
+https://tubesdpw.000webhostapp.com/
+
 ### Kenapa saya membuat aplikasi ini?
 
 Ini merupakan aplikasi pertama yang akan saya jadikan sebagai portfolio. Sebenarnya saya sudah banyak membuat banyak aplikasi berbasis web, namun saya lupa membackupnya. Jadi saya harus mengulang lagi dari awal demi portfolio. Selain sebagai portfolio, contoh aplikasi ini juga bisa saya jadikan sebagai latihan untuk mengasah skill koding saya.
@@ -50,7 +54,7 @@ Untuk cara instalasi dan konfigurasi caranya sangat mudah
 6. Untuk `namafolder` silahkan kalian ganti sesuai nama folder dari aplikasi ini di komputer atau laptop kalian
 7. Import `db/db_penjualan.sql` ke database milik kalian
 8. Untuk login `admin` kalian bisa menggunakan username = `admin` dan password `admin`
-9. Untuk login `kasir` kalian bisa menggunakan username = `KSR58` dan password `pwd_fakhrul`
+9. Untuk login `kasir` kalian bisa menggunakan username = `kasir` dan password `ksir`
 
 ### TUGAS DESAIN PEMOGRAMAN WEB - INSTITUT TELNOLOGI TELKOM PURWOKERTO
 KELAS : S1SE-02-A
