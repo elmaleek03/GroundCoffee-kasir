@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Jul 2020 pada 05.51
+-- Waktu pembuatan: 04 Feb 2021 pada 12.51
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.4
 
@@ -67,7 +67,7 @@ CREATE TABLE `data_toko` (
 --
 
 INSERT INTO `data_toko` (`id`, `nama_toko`, `nama_pemilik`, `no_telepon`, `alamat`) VALUES
-(1, 'Toko tokoan', 'Adinda', '081432123567', 'Purwokerto');
+(1, 'Toko tokoan', 'toko bersama', '081432123567', 'Purwokerto');
 
 -- --------------------------------------------------------
 
@@ -141,7 +141,7 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id`, `kode_pengguna`, `nama_pengguna`, `username_pengguna`, `password_pengguna`) VALUES
-(1, '18104047', 'Wafi Putra', 'admin', 'admin');
+(1, '18104047', 'admin', 'admin', 'admin');
 
 -- --------------------------------------------------------
 

@@ -33,7 +33,7 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label for="kode_pengguna"><strong>Kode Pengguna</strong></label>
-											<input type="text" name="kode_pengguna" placeholder="Masukkan Kode Pengguna" autocomplete="off"  class="form-control" required value="<?= $pengguna->kode_pengguna ?>" maxlength="8" readonly>
+											<input type="text" name="kode_pengguna" placeholder="Masukkan Kode Pengguna" autocomplete="off"  class="form-control" required value="<?= $pengguna->kode_pengguna ?>" maxlength="8" >
 										</div>
 										<div class="form-group col-md-6">
 											<label for="nama_pengguna"><strong>Nama Pengguna</strong></label>
@@ -43,7 +43,7 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label for="username_pengguna"><strong>Username</strong></label>
-											<input type="text" name="username_pengguna" placeholder="Masukkan Username" autocomplete="off"  class="form-control" required value="<?= $pengguna->username_pengguna ?>" readonly>
+											<input type="text" name="username_pengguna" placeholder="Masukkan Username" autocomplete="off"  class="form-control" required value="<?= $pengguna->username_pengguna ?>" >
 										</div>
 										<div class="form-group col-md-6">
 											<label for="password_pengguna"><strong>Password</strong></label>
