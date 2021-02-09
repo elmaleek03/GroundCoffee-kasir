@@ -55,17 +55,16 @@ Untuk cara instalasi dan konfigurasi caranya sangat mudah
 8. Untuk login `admin` kalian bisa menggunakan username = `admin` dan password `admin`
 9. Untuk login `kasir` kalian bisa menggunakan username = `KSR58` dan password `pwd_fakhrul`
 
-### TUGAS BASIS DATA LANJUT - IINSTITUT TELNOLOGI TELKOM PURWOKERTO
-KELAS : S1SE-02-B
+### TUGAS DESAIN PEMOGRAMAN WEB - IINSTITUT TELNOLOGI TELKOM PURWOKERTO
+KELAS : S1SE-02-A
 KELOMPOK :
 NAMA :
-1. ADINDA HASHINA (18104026)
-2. FAHMI NUR BAHAQI (18104032)
-3. MUHAMMAD ZAKIA SULTHON (18104040)
-4. WAFI PUTRA ARYANSYAH (18104047)
+1. FAHMI NUR BAHAQI (18104032)
+2. MUHAMMAD ZAKIA SULTHON (18104040)
+3. WAFI PUTRA ARYANSYAH (18104047)
 
 PROGRAM STUDI S1 SOFTWARE ENGINEERING FAKULTAS INFORMATIKA
-INSTITUT TEKNOLOGI TELKOM PURWOKERTO 2020
+INSTITUT TEKNOLOGI TELKOM PURWOKERTO 2021
 ### Refrensi dari :
 
 Fakhrul Fanani Nugroho siswa Kelas 12 Jurusan Teknik Komputer Informatika di SMK Negeri 1 Wanareja. https://www.instagram.com/nugrohospace/
