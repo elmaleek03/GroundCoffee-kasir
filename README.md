@@ -52,7 +52,7 @@ Untuk cara instalasi dan konfigurasi caranya sangat mudah
 8. Untuk login `admin` kalian bisa menggunakan username = `admin` dan password `admin`
 9. Untuk login `kasir` kalian bisa menggunakan username = `KSR58` dan password `pwd_fakhrul`
 
-### TUGAS DESAIN PEMOGRAMAN WEB - IINSTITUT TELNOLOGI TELKOM PURWOKERTO
+### TUGAS DESAIN PEMOGRAMAN WEB - INSTITUT TELNOLOGI TELKOM PURWOKERTO
 KELAS : S1SE-02-A
 
 KELOMPOK : Group 11
