@@ -14,7 +14,7 @@ Untuk kalian semua yang mau belajar atau yang butuh inspirasi tentang aplikasi b
 
 ### Boleh ga memodifikasi aplikasi ini?
 
-Jawabanya adalah **sangat sangat boleh!** Tapi ingat tetap sertakan siapa yang membuat aplikasi ini. 
+Jawabanya adalah **sangat sangat boleh!**. 
 
 
 ### Fiturnya apa saja sih?
