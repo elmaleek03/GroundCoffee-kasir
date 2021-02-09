@@ -1,5 +1,9 @@
 # Aplikasi Penjualan Dengan Framework CodeIgniter 3 & Template SB Admin 2
 
+### Link :
+
+https://tubesdpw.000webhostapp.com/
+
 ### Kenapa saya membuat aplikasi ini?
 
 Ini merupakan aplikasi pertama yang akan saya jadikan sebagai portfolio. Sebenarnya saya sudah banyak membuat banyak aplikasi berbasis web, namun saya lupa membackupnya. Jadi saya harus mengulang lagi dari awal demi portfolio. Selain sebagai portfolio, contoh aplikasi ini juga bisa saya jadikan sebagai latihan untuk mengasah skill koding saya.
@@ -12,9 +16,6 @@ Untuk kalian semua yang mau belajar atau yang butuh inspirasi tentang aplikasi b
 
 Jawabanya adalah **sangat sangat boleh!** Tapi ingat tetap sertakan siapa yang membuat aplikasi ini. 
 
-### Kalo di jual boleh ga?
-
-**Dilarang Keras!** Karena ini aplikasi bener bener gratis dan bebas bagi siapapun yang menggunakan dan ingin memodifikasinya.
 
 ### Fiturnya apa saja sih?
 Untuk fiturnya masih sangas sederhana, contohnya sebagai berikut
@@ -52,9 +53,22 @@ Untuk cara instalasi dan konfigurasi caranya sangat mudah
 5. Ubah isi dari variable `$config['base_url']` dengan `http://localhost/namafolder/`
 6. Untuk `namafolder` silahkan kalian ganti sesuai nama folder dari aplikasi ini di komputer atau laptop kalian
 7. Import `db/db_penjualan.sql` ke database milik kalian
-8. Untuk login `admin` kalian bisa menggunakan username = `nugrohoff` dan password `pwd_nugroho`
-9. Untuk login `kasir` kalian bisa menggunakan username = `KSR58` dan password `pwd_fakhrul`
+8. Untuk login `admin` kalian bisa menggunakan username = `admin` dan password `admin`
+9. Untuk login `kasir` kalian bisa menggunakan username = `kasir` dan password `ksir`
 
-### Tentang Saya
+### TUGAS DESAIN PEMOGRAMAN WEB - INSTITUT TELNOLOGI TELKOM PURWOKERTO
+KELAS : S1SE-02-A
+
+KELOMPOK : Group 11
+
+NAMA :
+
+1. FAHMI NUR BAHAQI (18104032)
+2. FAJAR MALIK (18104008)
+3. RIDHO AKBARSYAH RANADHAN (18104020)
+
+PROGRAM STUDI S1 SOFTWARE ENGINEERING FAKULTAS INFORMATIKA
+INSTITUT TEKNOLOGI TELKOM PURWOKERTO 2021
+### Refrensi dari :
 
 Fakhrul Fanani Nugroho siswa Kelas 12 Jurusan Teknik Komputer Informatika di SMK Negeri 1 Wanareja. https://www.instagram.com/nugrohospace/
