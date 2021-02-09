@@ -12,9 +12,6 @@ Untuk kalian semua yang mau belajar atau yang butuh inspirasi tentang aplikasi b
 
 Jawabanya adalah **sangat sangat boleh!** Tapi ingat tetap sertakan siapa yang membuat aplikasi ini. 
 
-### Kalo di jual boleh ga?
-
-**Dilarang Keras!** Karena ini aplikasi bener bener gratis dan bebas bagi siapapun yang menggunakan dan ingin memodifikasinya.
 
 ### Fiturnya apa saja sih?
 Untuk fiturnya masih sangas sederhana, contohnya sebagai berikut
@@ -60,8 +57,8 @@ KELAS : S1SE-02-A
 KELOMPOK :
 NAMA :
 1. FAHMI NUR BAHAQI (18104032)
-2. MUHAMMAD ZAKIA SULTHON (18104040)
-3. WAFI PUTRA ARYANSYAH (18104047)
+2. FAJAR MALIK (18104008)
+3. RIDHO AKBARSYAH RANADHAN (18104020)
 
 PROGRAM STUDI S1 SOFTWARE ENGINEERING FAKULTAS INFORMATIKA
 INSTITUT TEKNOLOGI TELKOM PURWOKERTO 2021
