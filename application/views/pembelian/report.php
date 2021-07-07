@@ -17,23 +17,19 @@
 		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 			<thead>
 				<tr>
-					<td>No</td>
-					<td>Kode Produk</td>
-					<td>Nama Produk</td>
-					<td>Harga Beli</td>
-					<td>Harga Jual</td>
-					<td>Stok</td>
+					<td>No Pembelian</td>
+					<td>Nama Kasir</td>
+					<td>Tanggal Pembelian</td>
+					<td>Total</td>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($all_barang as $barang): ?>
+				<?php foreach ($all_pembelian as $pembelian): ?>
 					<tr>
-						<td><?= $no++ ?></td>
-						<td><?= $barang->kode_barang ?></td>
-						<td><?= $barang->nama_barang ?></td>
-						<td>Rp <?= number_format($barang->harga_beli, 0, ',', '.') ?></td>
-						<td>Rp <?= number_format($barang->harga_jual, 0, ',', '.') ?></td>
-						<td><?= $barang->stok ?> <?= strtoupper($barang->satuan) ?></td>
+						<td><?= $pembelian->no_pembelian ?></td>
+						<td><?= $pembelian->nama_kasir ?></td>
+						<td><?= $pembelian->tgl_pembelian ?> Pukul <?= $pembelian->jam_pembelian ?></td>
+						<td>Rp <?= number_format($pembelian->total, 0, ',', '.') ?></td>
 					</tr>
 				<?php endforeach ?>
 			</tbody>

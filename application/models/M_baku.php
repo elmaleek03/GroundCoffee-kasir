@@ -1,7 +1,7 @@
 <?php
 
-class M_barang extends CI_Model{
-	protected $_table = 'barang';
+class M_baku extends CI_Model{
+	protected $_table = 'baku';
 
 	public function lihat(){
 		$query = $this->db->get($this->_table);
@@ -18,14 +18,14 @@ class M_barang extends CI_Model{
 		return $query->result();
 	}
 
-	public function lihat_id($kode_barang){
-		$query = $this->db->get_where($this->_table, ['kode_barang' => $kode_barang]);
+	public function lihat_id($kode_baku){
+		$query = $this->db->get_where($this->_table, ['kode_baku' => $kode_baku]);
 		return $query->row();
 	}
 
-	public function lihat_nama_barang($nama_barang){
+	public function lihat_nama_baku($nama_baku){
 		$query = $this->db->select('*');
-		$query = $this->db->where(['nama_barang' => $nama_barang]);
+		$query = $this->db->where(['nama_baku' => $nama_baku]);
 		$query = $this->db->get($this->_table);
 		return $query->row();
 	}
@@ -34,21 +34,21 @@ class M_barang extends CI_Model{
 		return $this->db->insert($this->_table, $data);
 	}
 
-	public function min_stok($stok, $nama_barang){
+	public function min_stok($stok, $nama_baku){
 		$query = $this->db->set('stok', 'stok+' . $stok, false);
-		$query = $this->db->where('nama_barang', $nama_barang);
+		$query = $this->db->where('nama_baku', $nama_baku);
 		$query = $this->db->update($this->_table);
 		return $query;
 	}
 
-	public function ubah($data, $kode_barang){
+	public function ubah($data, $kode_baku){
 		$query = $this->db->set($data);
-		$query = $this->db->where(['kode_barang' => $kode_barang]);
+		$query = $this->db->where(['kode_baku' => $kode_baku]);
 		$query = $this->db->update($this->_table);
 		return $query;
 	}
 
-	public function hapus($kode_barang){
-		return $this->db->delete($this->_table, ['kode_barang' => $kode_barang]);
+	public function hapus($kode_baku){
+		return $this->db->delete($this->_table, ['kode_baku' => $kode_baku]);
 	}
 }

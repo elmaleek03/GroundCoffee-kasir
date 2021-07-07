@@ -18,22 +18,22 @@
 			<thead>
 				<tr>
 					<td>No</td>
-					<td>Kode Produk</td>
-					<td>Nama Produk</td>
+					<td>Kode Baku</td>
+					<td>Nama Baku</td>
 					<td>Harga Beli</td>
 					<td>Harga Jual</td>
 					<td>Stok</td>
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach ($all_barang as $barang): ?>
+				<?php foreach ($all_baku as $baku): ?>
 					<tr>
 						<td><?= $no++ ?></td>
-						<td><?= $barang->kode_barang ?></td>
-						<td><?= $barang->nama_barang ?></td>
-						<td>Rp <?= number_format($barang->harga_beli, 0, ',', '.') ?></td>
-						<td>Rp <?= number_format($barang->harga_jual, 0, ',', '.') ?></td>
-						<td><?= $barang->stok ?> <?= strtoupper($barang->satuan) ?></td>
+						<td><?= $baku->kode_baku ?></td>
+						<td><?= $baku->nama_baku ?></td>
+						<td>Rp <?= number_format($baku->harga_beli, 0, ',', '.') ?></td>
+						<td>Rp <?= number_format($baku->harga_jual, 0, ',', '.') ?></td>
+						<td><?= $baku->stok ?> <?= strtoupper($baku->satuan) ?></td>
 					</tr>
 				<?php endforeach ?>
 			</tbody>

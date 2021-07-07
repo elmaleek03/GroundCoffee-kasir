@@ -10,7 +10,7 @@
 		<?php $this->load->view('partials/sidebar.php') ?>
 
 		<div id="content-wrapper" class="d-flex flex-column">
-			<div id="content" data-url="<?= base_url('barang') ?>">
+			<div id="content" data-url="<?= base_url('baku') ?>">
 				<!-- load Topbar -->
 				<?php $this->load->view('partials/topbar.php') ?>
 
@@ -20,7 +20,7 @@
 						<h1 class="h3 m-0 text-gray-800"><?= $title ?></h1>
 					</div>
 					<div class="float-right">
-						<a href="<?= base_url('barang') ?>" class="btn btn-secondary btn-sm"><i class="fa fa-reply"></i>&nbsp;&nbsp;Kembali</a>
+						<a href="<?= base_url('baku') ?>" class="btn btn-secondary btn-sm"><i class="fa fa-reply"></i>&nbsp;&nbsp;Kembali</a>
 					</div>
 				</div>
 				<hr>
@@ -29,34 +29,40 @@
 						<div class="card shadow">
 							<div class="card-header"><strong>Isi Form Dibawah Ini!</strong></div>
 							<div class="card-body">
-								<form action="<?= base_url('barang/proses_tambah') ?>" id="form-tambah" method="POST">
+								<form action="<?= base_url('baku/proses_tambah') ?>" id="form-tambah" method="POST">
 									<div class="form-row">
-										<div class="form-group col-xs-6 .col-md-10">
-											<label for="kode_barang"><strong>Kode Produk</strong></label>
-											<input type="text" name="kode_barang" placeholder="Masukkan Kode Barang" autocomplete="off"  class="form-control" required value="<?= mt_rand(10000000, 99999999) ?>" maxlength="8" readonly>
+										<div class="form-group col-md-6">
+											<label for="kode_baku"><strong>Kode Baku</strong></label>
+											<input type="text" name="kode_baku" placeholder="Masukkan Kode Baku" autocomplete="off"  class="form-control" required value="<?= mt_rand(10000000, 99999999) ?>" maxlength="8" readonly>
 										</div>
-										<div class="form-group col-xs-6 .col-md-10">
-											<label for="nama_barang"><strong>Nama Produk</strong></label>
-											<input type="text" name="nama_barang" placeholder="Masukkan Nama Barang" autocomplete="off"  class="form-control" required>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="nama_baku"><strong>Nama Baku</strong></label>
+											<input type="text" name="nama_baku" placeholder="Masukkan Nama Baku" autocomplete="off"  class="form-control" required>
 										</div>
-										<div class="form-group col-xs-6 .col-md-10">
-											<label for="harga_jual"><strong>Harga</strong></label>
-											<input type="number" name="harga_jual" placeholder="Masukkan Harga Jual" autocomplete="off"  class="form-control" required>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="harga_beli"><strong>Harga</strong></label>
+											<input type="number" name="harga_beli" placeholder="Masukkan Harga Beli" autocomplete="off"  class="form-control" required>
 										</div>
-										<div class="form-group col-xs-6 .col-md-10">
-											<label for="stok"><strong>Jumlah Terjual (Isi Minimal 2!)</strong></label>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="stok"><strong>Total Pembelian (Isi MInimal 2!)</strong></label>
 											<input type="number" name="stok" placeholder="Masukkan Stok" autocomplete="off"  class="form-control" required>
 										</div>
-										<div class="form-group col-xs-6 .col-md-10">
+									</div>
+									<div class="form-row">
+									<div class="form-group col-md-6">
 											<label for="satuan"><strong>Satuan</strong></label>
 											<select name="satuan" id="satuan" class="form-control" required>
 												<option value="">-- Silahkan Pilih --</option>
-												<option value="pcs">PCS</option>
-												<option value="sachet">SACHET</option>
-												<option value="renceng">RENCENG</option>
-												<option value="pak">PAK</option>
-												<option value="kg">KILOGRAM</option>
-												<option value="ons">ONS</option>
+												<option value="pcs">Pcs</option>
+												<option value="sachet">Box</option>
+												<option value="renceng">Kg</option>
+												<option value="pak">Pack</option>
 											</select>
 										</div>
 									</div>

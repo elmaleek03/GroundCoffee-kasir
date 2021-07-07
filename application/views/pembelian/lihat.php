@@ -10,7 +10,7 @@
 		<?php $this->load->view('partials/sidebar.php') ?>
 
 		<div id="content-wrapper" class="d-flex flex-column">
-			<div id="content" data-url="<?= base_url('pengguna') ?>">
+			<div id="content" data-url="<?= base_url('pembelian') ?>">
 				<!-- load Topbar -->
 				<?php $this->load->view('partials/topbar.php') ?>
 
@@ -20,7 +20,7 @@
 						<h1 class="h3 m-0 text-gray-800"><?= $title ?></h1>
 					</div>
 					<div class="float-right">
-						<a href="<?= base_url('pengguna/tambah') ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</a>
+						<a href="<?= base_url('pembelian/tambah') ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</a>
 					</div>
 				</div>
 				<hr>
@@ -40,31 +40,29 @@
 					</div>
 				<?php endif ?>
 				<div class="card shadow">
-					<div class="card-header"><strong>Daftar Superadmin</strong></div>
+					<div class="card-header"><strong>Daftar Pembelian</strong></div>
 					<div class="card-body">
 						<div class="table-responsive">
 							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
-										<td>No</td>
-										<td>Kode Pengguna</td>
-										<td>Nama Pengguna</td>
-										<td>Username</td>
-										<td>Password</td>
+										<td>No Pembelian</td>
+										<td>Nama Kasir</td>
+										<td>Tanggal Pembelian</td>
+										<td>Total</td>
 										<td>Aksi</td>
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($all_pengguna as $pengguna): ?>
+									<?php foreach ($all_pembelian as $pembelian): ?>
 										<tr>
-											<td><?= $no++ ?></td>
-											<td><?= $pengguna->kode_pengguna ?></td>
-											<td><?= $pengguna->nama_pengguna ?></td>
-											<td><?= $pengguna->username_pengguna ?></td>
-											<td><?= $pengguna->password_pengguna ?></td>
+											<td><?= $pembelian->no_pembelian ?></td>
+											<td><?= $pembelian->nama_kasir ?></td>
+											<td><?= $pembelian->tgl_pembelian ?> Pukul <?= $pembelian->jam_pembelian ?></td>
+											<td>Rp <?= number_format($pembelian->total, 0, ',', '.') ?></td>
 											<td>
-												<a href="<?= base_url('pengguna/ubah/' . $pengguna->id) ?>" class="btn btn-success btn-sm"><i class="fa fa-pen"></i></a>
-												<a onclick="return confirm('apakah anda yakin?')" href="<?= base_url('pengguna/hapus/' . $pengguna->id) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+												<a href="<?= base_url('pembelian/detail/' . $pembelian->no_pembelian) ?>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+												<a onclick="return confirm('apakah anda yakin?')" href="<?= base_url('pembelian/hapus/' . $pembelian->no_pembelian) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 											</td>
 										</tr>
 									<?php endforeach ?>

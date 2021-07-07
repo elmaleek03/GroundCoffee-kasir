@@ -10,7 +10,7 @@
 		<?php $this->load->view('partials/sidebar.php') ?>
 
 		<div id="content-wrapper" class="d-flex flex-column">
-			<div id="content" data-url="<?= base_url('pengguna') ?>">
+			<div id="content" data-url="<?= base_url('baku') ?>">
 				<!-- load Topbar -->
 				<?php $this->load->view('partials/topbar.php') ?>
 
@@ -20,7 +20,9 @@
 						<h1 class="h3 m-0 text-gray-800"><?= $title ?></h1>
 					</div>
 					<div class="float-right">
-						<a href="<?= base_url('pengguna/tambah') ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</a>
+						<?php if ($this->session->login['role'] == 'admin'): ?>
+							<a href="<?= base_url('baku/tambah') ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</a>
+						<?php endif ?>
 					</div>
 				</div>
 				<hr>
@@ -40,32 +42,36 @@
 					</div>
 				<?php endif ?>
 				<div class="card shadow">
-					<div class="card-header"><strong>Daftar Superadmin</strong></div>
+					<div class="card-header"><strong>Daftar Bahan Baku</strong></div>
 					<div class="card-body">
 						<div class="table-responsive">
 							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
 										<td>No</td>
-										<td>Kode Pengguna</td>
-										<td>Nama Pengguna</td>
-										<td>Username</td>
-										<td>Password</td>
-										<td>Aksi</td>
+										<td>Kode Baku</td>
+										<td>Nama Baku</td>
+										<td>Harga</td>
+										<td>Total Pembelian</td>
+										<?php if ($this->session->login['role'] == 'admin'): ?>
+											<td>Aksi</td>
+										<?php endif ?>
 									</tr>
 								</thead>
 								<tbody>
-									<?php foreach ($all_pengguna as $pengguna): ?>
+									<?php foreach ($all_baku as $baku): ?>
 										<tr>
 											<td><?= $no++ ?></td>
-											<td><?= $pengguna->kode_pengguna ?></td>
-											<td><?= $pengguna->nama_pengguna ?></td>
-											<td><?= $pengguna->username_pengguna ?></td>
-											<td><?= $pengguna->password_pengguna ?></td>
-											<td>
-												<a href="<?= base_url('pengguna/ubah/' . $pengguna->id) ?>" class="btn btn-success btn-sm"><i class="fa fa-pen"></i></a>
-												<a onclick="return confirm('apakah anda yakin?')" href="<?= base_url('pengguna/hapus/' . $pengguna->id) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-											</td>
+											<td><?= $baku->kode_baku ?></td>
+											<td><?= $baku->nama_baku ?></td>
+											<td>Rp <?= number_format($baku->harga_beli, 0, ',', '.') ?></td>
+											<td><?= $baku->stok ?> <?= strtoupper($baku->satuan) ?></td>
+											<?php if ($this->session->login['role'] == 'admin'): ?>
+												<td>
+													<a href="<?= base_url('baku/ubah/' . $baku->kode_baku) ?>" class="btn btn-success btn-sm"><i class="fa fa-pen"></i></a>
+													<a onclick="return confirm('apakah anda yakin?')" href="<?= base_url('baku/hapus/' . $baku->kode_baku) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+												</td>
+											<?php endif ?>
 										</tr>
 									<?php endforeach ?>
 								</tbody>

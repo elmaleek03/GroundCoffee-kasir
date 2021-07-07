@@ -5,7 +5,7 @@
 </head>
 
 <body id="page-top">
-	<div id="wrapper">
+	<div id="wrapper" >
 		<!-- load sidebar -->
 		<?php $this->load->view('partials/sidebar.php') ?>
 

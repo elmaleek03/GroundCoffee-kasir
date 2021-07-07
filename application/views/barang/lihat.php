@@ -42,18 +42,17 @@
 					</div>
 				<?php endif ?>
 				<div class="card shadow">
-					<div class="card-header"><strong>Daftar Barang</strong></div>
+					<div class="card-header"><strong>Daftar Produk</strong></div>
 					<div class="card-body">
 						<div class="table-responsive">
 							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
 										<td>No</td>
-										<td>Kode Barang</td>
-										<td>Nama Barang</td>
-										<td>Harga Beli</td>
+										<td>Kode Produk</td>
+										<td>Nama Produk</td>
 										<td>Harga Jual</td>
-										<td>Stok</td>
+										<td>Jumlah Terjual</td>
 										<?php if ($this->session->login['role'] == 'admin'): ?>
 											<td>Aksi</td>
 										<?php endif ?>
@@ -65,7 +64,6 @@
 											<td><?= $no++ ?></td>
 											<td><?= $barang->kode_barang ?></td>
 											<td><?= $barang->nama_barang ?></td>
-											<td>Rp <?= number_format($barang->harga_beli, 0, ',', '.') ?></td>
 											<td>Rp <?= number_format($barang->harga_jual, 0, ',', '.') ?></td>
 											<td><?= $barang->stok ?> <?= strtoupper($barang->satuan) ?></td>
 											<?php if ($this->session->login['role'] == 'admin'): ?>

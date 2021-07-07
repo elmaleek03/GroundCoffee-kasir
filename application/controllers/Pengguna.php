@@ -16,7 +16,7 @@ class Pengguna extends CI_Controller {
 			redirect('penjualan');
 		}
 
-		$this->data['title'] = 'Data Pengguna';
+		$this->data['title'] = 'Superadmin';
 		$this->data['all_pengguna'] = $this->m_pengguna->lihat();
 		$this->data['no'] = 1;
 
@@ -48,10 +48,10 @@ class Pengguna extends CI_Controller {
 		];
 
 		if($this->m_pengguna->tambah($data)){
-			$this->session->set_flashdata('success', 'Data Pengguna <strong>Berhasil</strong> Ditambahkan!');
+			$this->session->set_flashdata('success', 'Superadmin <strong>Berhasil</strong> Ditambahkan!');
 			redirect('pengguna');
 		} else {
-			$this->session->set_flashdata('error', 'Data Pengguna <strong>Gagal</strong> Ditambahkan!');
+			$this->session->set_flashdata('error', 'Superadmin <strong>Gagal</strong> Ditambahkan!');
 			redirect('pengguna');
 		}
 	}
@@ -82,10 +82,10 @@ class Pengguna extends CI_Controller {
 		];
 
 		if($this->m_pengguna->ubah($data, $id)){
-			$this->session->set_flashdata('success', 'Data Pengguna <strong>Berhasil</strong> Diubah!');
+			$this->session->set_flashdata('success', 'Superadmin <strong>Berhasil</strong> Diubah!');
 			redirect('pengguna');
 		} else {
-			$this->session->set_flashdata('error', 'Data Pengguna <strong>Gagal</strong> Diubah!');
+			$this->session->set_flashdata('error', 'Superadmin <strong>Gagal</strong> Diubah!');
 			redirect('pengguna');
 		}
 	}
@@ -97,10 +97,10 @@ class Pengguna extends CI_Controller {
 		}
 
 		if($this->m_pengguna->hapus($id)){
-			$this->session->set_flashdata('success', 'Data Pengguna <strong>Berhasil</strong> Dihapus!');
+			$this->session->set_flashdata('success', 'Superadmin <strong>Berhasil</strong> Dihapus!');
 			redirect('pengguna');
 		} else {
-			$this->session->set_flashdata('error', 'Data Pengguna <strong>Gagal</strong> Dihapus!');
+			$this->session->set_flashdata('error', 'Superadmin <strong>Gagal</strong> Dihapus!');
 			redirect('pengguna');
 		}
 	}
@@ -109,13 +109,13 @@ class Pengguna extends CI_Controller {
 		$dompdf = new Dompdf();
 		// $this->data['perusahaan'] = $this->m_usaha->lihat();
 		$this->data['all_pengguna'] = $this->m_pengguna->lihat();
-		$this->data['title'] = 'Laporan Data Pengguna';
+		$this->data['title'] = 'Laporan Superadmin';
 		$this->data['no'] = 1;
 
 		$dompdf->setPaper('A4', 'Landscape');
 		$html = $this->load->view('pengguna/report', $this->data, true);
 		$dompdf->load_html($html);
 		$dompdf->render();
-		$dompdf->stream('Laporan Data Pengguna Tanggal ' . date('d F Y'), array("Attachment" => false));
+		$dompdf->stream('Laporan Superadmin Tanggal ' . date('d F Y'), array("Attachment" => false));
 	}
 }

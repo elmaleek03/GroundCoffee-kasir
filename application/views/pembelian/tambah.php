@@ -5,12 +5,12 @@
 </head>
 
 <body id="page-top">
-	<div id="wrapper">
+	<div id="wrapper" >
 		<!-- load sidebar -->
 		<?php $this->load->view('partials/sidebar.php') ?>
 
 		<div id="content-wrapper" class="d-flex flex-column">
-			<div id="content" data-url="<?= base_url('penjualan') ?>">
+			<div id="content" data-url="<?= base_url('pembelian') ?>">
 				<!-- load Topbar -->
 				<?php $this->load->view('partials/topbar.php') ?>
 
@@ -20,7 +20,7 @@
 						<h1 class="h3 m-0 text-gray-800"><?= $title ?></h1>
 					</div>
 					<div class="float-right">
-						<a href="<?= base_url('penjualan') ?>" class="btn btn-secondary btn-sm"><i class="fa fa-reply"></i>&nbsp;&nbsp;Kembali</a>
+						<a href="<?= base_url('pembelian') ?>" class="btn btn-secondary btn-sm"><i class="fa fa-reply"></i>&nbsp;&nbsp;Kembali</a>
 					</div>
 				</div>
 				<hr>
@@ -29,17 +29,13 @@
 						<div class="card shadow">
 							<div class="card-header"><strong>Isi Form Dibawah Ini!</strong></div>
 							<div class="card-body">
-								<form action="<?= base_url('penjualan/proses_tambah') ?>" id="form-tambah" method="POST">
+								<form action="<?= base_url('pembelian/proses_tambah') ?>" id="form-tambah" method="POST">
 									<h5>Data Kasir</h5>
 									<hr>
 									<div class="form-row">
 										<div class="form-group col-xs-6 .col-md-10">
-											<label>No. Penjualan</label>
-											<input type="text" name="no_penjualan" value="PJ<?= time() ?>" readonly class="form-control">
-										</div>
-										<div class="form-group col-xs-6 .col-md-10">
-											<label>Kode Kasir</label>
-											<input type="text" name="kode_kasir" value="<?= $this->session->login['kode'] ?>" readonly class="form-control">
+											<label>No. Pembelian</label>
+											<input type="text" name="no_pembelian" value="PB<?= time() ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label>Nama Kasir</label>
@@ -47,32 +43,36 @@
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label>Tanggal Penjualan</label>
-											<input type="text" name="tgl_penjualan" value="<?= date('d/m/Y') ?>" readonly class="form-control">
+											<input type="text" name="tgl_pembelian" value="<?= date('d/m/Y') ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label>Jam</label>
-											<input type="text" name="jam_penjualan" value="<?= date('H:i:s') ?>" readonly class="form-control">
+											<input type="text" name="jam_pembelian" value="<?= date('H:i:s') ?>" readonly class="form-control">
+										</div>
+										<div class="form-group col-xs-6 .col-md-10">
+											<label>Kode Kasir</label>
+											<input type="text" name="kode_kasir" value="<?= $this->session->login['kode'] ?>" readonly class="form-control">
 										</div>
 									</div>
-									<h5>Data Barang</h5>
+									<h5>Data Bahan Baku</h5>
 									<hr>
 									<div class="form-row">
 										<div class="form-group col-xs-6 .col-md-10">
-											<label for="nama_barang">Nama Barang</label>
-											<select name="nama_barang" id="nama_barang" class="form-control">
-												<option value="">Pilih Barang</option>
-												<?php foreach ($all_barang as $barang): ?>
-													<option value="<?= $barang->nama_barang ?>"><?= $barang->nama_barang ?></option>
+											<label for="nama_baku">Nama Baku</label>
+											<select name="nama_baku" id="nama_baku" class="form-control">
+												<option value="">Pilih Baku</option>
+												<?php foreach ($all_baku as $baku): ?>
+													<option value="<?= $baku->nama_baku ?>"><?= $baku->nama_baku ?></option>
 												<?php endforeach ?>
 											</select>
 										</div>
-										<div class="form-group col-xs-6 .col-md-10">
-											<label>Kode Barang</label>
-											<input type="text" name="kode_barang" value="" readonly class="form-control">
+										<div class="form-group col-xs-8 .col-md-10">
+											<label>Kode Baku</label>
+											<input type="text" name="kode_baku" value="" readonly class="form-control">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
-											<label>Harga Barang</label>
-											<input type="text" name="harga_barang" value="" readonly class="form-control">
+											<label>Harga Baku</label>
+											<input type="text" name="harga_baku" value="" readonly class="form-control">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label>Jumlah</label>
@@ -95,7 +95,7 @@
 										<table class="table table-bordered" id="keranjang">
 											<thead>
 												<tr>
-													<td width="35%">Nama Barang</td>
+													<td width="35%">Nama Baku</td>
 													<td width="15%">Harga</td>
 													<td width="15%">Jumlah</td>
 													<td width="10%">Satuan</td>
@@ -119,7 +119,7 @@
 												</tr>
 											</tfoot>
 										</table>
-										</div>
+									</div>
 									</div>
 								</form>
 							</div>				
@@ -143,29 +143,29 @@
 			   	}
 			})
 
-			$('#nama_barang').on('change', function(){
+			$('#nama_baku').on('change', function(){
 
 				if($(this).val() == '') reset()
 				else {
-					const url_get_all_barang = $('#content').data('url') + '/get_all_barang'
+					const url_get_all_baku = $('#content').data('url') + '/get_all_baku'
 					$.ajax({
-						url: url_get_all_barang,
+						url: url_get_all_baku,
 						type: 'POST',
 						dataType: 'json',
-						data: {nama_barang: $(this).val()},
+						data: {nama_baku: $(this).val()},
 						success: function(data){
-							$('input[name="kode_barang"]').val(data.kode_barang)
-							$('input[name="harga_barang"]').val(data.harga_jual)
+							$('input[name="kode_baku"]').val(data.kode_baku)
+							$('input[name="harga_baku"]').val(data.harga_beli)
 							$('input[name="jumlah"]').val(1)
 							$('input[name="satuan"]').val(data.satuan)
 							$('input[name="max_hidden"]').val(data.stok)
 							$('input[name="jumlah"]').prop('readonly', false)
 							$('button#tambah').prop('disabled', false)
 
-							$('input[name="sub_total"]').val($('input[name="jumlah"]').val() * $('input[name="harga_barang"]').val())
+							$('input[name="sub_total"]').val($('input[name="jumlah"]').val() * $('input[name="harga_baku"]').val())
 							
 							$('input[name="jumlah"]').on('keydown keyup change blur', function(){
-								$('input[name="sub_total"]').val($('input[name="jumlah"]').val() * $('input[name="harga_barang"]').val())
+								$('input[name="sub_total"]').val($('input[name="jumlah"]').val() * $('input[name="harga_baku"]').val())
 							})
 						}
 					})
@@ -173,24 +173,21 @@
 			})
 
 			$(document).on('click', '#tambah', function(e){
-				const url_keranjang_barang = $('#content').data('url') + '/keranjang_barang'
+				const url_keranjang_baku = $('#content').data('url') + '/keranjang_baku'
 				const data_keranjang = {
-					nama_barang: $('select[name="nama_barang"]').val(),
-					harga_barang: $('input[name="harga_barang"]').val(),
+					nama_baku: $('select[name="nama_baku"]').val(),
+					harga_baku: $('input[name="harga_baku"]').val(),
 					jumlah: $('input[name="jumlah"]').val(),
 					satuan: $('input[name="satuan"]').val(),
 					sub_total: $('input[name="sub_total"]').val(),
 				}
 
-				if(parseInt($('input[name="max_hidden"]').val()) <= parseInt(data_keranjang.jumlah)) {
-					alert('stok tidak tersedia! stok tersedia : ' + parseInt($('input[name="max_hidden"]').val()))	
-				} else {
 					$.ajax({
-						url: url_keranjang_barang,
+						url: url_keranjang_baku,
 						type: 'POST',
 						data: data_keranjang,
 						success: function(data){
-							if($('select[name="nama_barang"]').val() == data_keranjang.nama_barang) $('option[value="' + data_keranjang.nama_barang + '"]').hide()
+							if($('select[name="nama_baku"]').val() == data_keranjang.nama_baku) $('option[value="' + data_keranjang.nama_baku + '"]').hide()
 							reset()
 
 							$('table#keranjang tbody').append(data)
@@ -200,7 +197,6 @@
 							$('input[name="total_hidden"]').val(hitung_total())
 						}
 					})
-				}
 
 			})
 
@@ -208,15 +204,15 @@
 			$(document).on('click', '#tombol-hapus', function(){
 				$(this).closest('.row-keranjang').remove()
 
-				$('option[value="' + $(this).data('nama-barang') + '"]').show()
+				$('option[value="' + $(this).data('nama-baku') + '"]').show()
 
 				if($('tbody').children().length == 0) $('tfoot').hide()
 			})
 
 			$('button[type="submit"]').on('click', function(){
-				$('input[name="kode_barang"]').prop('disabled', true)
-				$('select[name="nama_barang"]').prop('disabled', true)
-				$('input[name="harga_barang"]').prop('disabled', true)
+				$('input[name="kode_baku"]').prop('disabled', true)
+				$('select[name="nama_baku"]').prop('disabled', true)
+				$('input[name="harga_baku"]').prop('disabled', true)
 				$('input[name="jumlah"]').prop('disabled', true)
 				$('input[name="sub_total"]').prop('disabled', true)
 			})
@@ -231,9 +227,9 @@
 			}
 
 			function reset(){
-				$('#nama_barang').val('')
-				$('input[name="kode_barang"]').val('')
-				$('input[name="harga_barang"]').val('')
+				$('#nama_baku').val('')
+				$('input[name="kode_baku"]').val('')
+				$('input[name="harga_baku"]').val('')
 				$('input[name="jumlah"]').val('')
 				$('input[name="sub_total"]').val('')
 				$('input[name="jumlah"]').prop('readonly', true)

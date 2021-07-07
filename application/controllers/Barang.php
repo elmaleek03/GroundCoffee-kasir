@@ -11,7 +11,7 @@ class Barang extends CI_Controller{
 	}
 
 	public function index(){
-		$this->data['title'] = 'Data Barang';
+		$this->data['title'] = 'Data Produk';
 		$this->data['all_barang'] = $this->m_barang->lihat();
 		$this->data['no'] = 1;
 
@@ -24,7 +24,7 @@ class Barang extends CI_Controller{
 			redirect('penjualan');
 		}
 
-		$this->data['title'] = 'Tambah Barang';
+		$this->data['title'] = 'Tambah Produk';
 
 		$this->load->view('barang/tambah', $this->data);
 	}
@@ -59,7 +59,7 @@ class Barang extends CI_Controller{
 			redirect('penjualan');
 		}
 
-		$this->data['title'] = 'Ubah Barang';
+		$this->data['title'] = 'Ubah Produk';
 		$this->data['barang'] = $this->m_barang->lihat_id($kode_barang);
 
 		$this->load->view('barang/ubah', $this->data);
@@ -81,10 +81,10 @@ class Barang extends CI_Controller{
 		];
 
 		if($this->m_barang->ubah($data, $kode_barang)){
-			$this->session->set_flashdata('success', 'Data Barang <strong>Berhasil</strong> Diubah!');
+			$this->session->set_flashdata('success', 'Data Produk <strong>Berhasil</strong> Diubah!');
 			redirect('barang');
 		} else {
-			$this->session->set_flashdata('error', 'Data Barang <strong>Gagal</strong> Diubah!');
+			$this->session->set_flashdata('error', 'Data Produk <strong>Gagal</strong> Diubah!');
 			redirect('barang');
 		}
 	}
@@ -96,10 +96,10 @@ class Barang extends CI_Controller{
 		}
 		
 		if($this->m_barang->hapus($kode_barang)){
-			$this->session->set_flashdata('success', 'Data Barang <strong>Berhasil</strong> Dihapus!');
+			$this->session->set_flashdata('success', 'Data Produk <strong>Berhasil</strong> Dihapus!');
 			redirect('barang');
 		} else {
-			$this->session->set_flashdata('error', 'Data Barang <strong>Gagal</strong> Dihapus!');
+			$this->session->set_flashdata('error', 'Data Produk <strong>Gagal</strong> Dihapus!');
 			redirect('barang');
 		}
 	}
@@ -108,13 +108,13 @@ class Barang extends CI_Controller{
 		$dompdf = new Dompdf();
 		// $this->data['perusahaan'] = $this->m_usaha->lihat();
 		$this->data['all_barang'] = $this->m_barang->lihat();
-		$this->data['title'] = 'Laporan Data Barang';
+		$this->data['title'] = 'Laporan Data Produk';
 		$this->data['no'] = 1;
 
 		$dompdf->setPaper('A4', 'Landscape');
 		$html = $this->load->view('barang/report', $this->data, true);
 		$dompdf->load_html($html);
 		$dompdf->render();
-		$dompdf->stream('Laporan Data Barang Tanggal ' . date('d F Y'), array("Attachment" => false));
+		$dompdf->stream('Laporan Data Produk Tanggal ' . date('d F Y'), array("Attachment" => false));
 	}
 }
