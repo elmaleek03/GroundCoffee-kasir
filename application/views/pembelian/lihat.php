@@ -67,7 +67,13 @@
 										</tr>
 									<?php endforeach ?>
 								</tbody>
-							</table>
+								<tfoot>
+										<tr>
+											<td colspan="4" align="right"><strong>Total : </strong></td>
+											<td>Rp <?= number_format($pembelian->total, 0, ',', '.') ?></td>
+										</tr>
+									</tfoot>
+							</table>				
 
 			<!-- load footer -->
 			<?php $this->load->view('partials/footer.php') ?>
