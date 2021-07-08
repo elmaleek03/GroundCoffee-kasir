@@ -16,7 +16,7 @@ class Pembelian extends CI_Controller {
 	public function index(){
 		$this->data['title'] = 'Data Penjualan';
 		$this->data['all_pembelian'] = $this->m_pembelian->lihat();
-		$data['pembelian'] = $this->m_pembelian->get_pembelian()->result();
+		$this->data['sum'] = $this->m_pembelian->get_sum();
 
 		$this->load->view('pembelian/lihat', $this->data);
 	}
@@ -90,6 +90,7 @@ class Pembelian extends CI_Controller {
 	public function keranjang_baku(){
 		$this->load->view('pembelian/keranjang');
 	}
+
 
 
 	public function export(){

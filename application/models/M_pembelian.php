@@ -24,6 +24,12 @@ class M_pembelian extends CI_Model {
 		return $this->db->delete($this->_table, ['no_pembelian' => $no_pembelian]);
 	}
 
+	public function get_sum(){
+		$sql = "SELECT sum(total) as total FROM pembelian";
+		$result = $this->db->query($sql);
+		return $result->row()->total;
+	}
+
 	public function get_pembelian() {
 		$this->db->select('*');
 		$this->db->from('pembelian');
