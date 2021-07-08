@@ -45,7 +45,7 @@
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label for="stok"><strong>Jumlah Terjual</strong></label>
-											<input type="number" name="stok" placeholder="Masukkan Stok" autocomplete="off"  class="form-control" required>
+											<input type="number" name="stok" placeholder="Masukkan Jumlah Terjual" autocomplete="off"  class="form-control" required>
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label for="satuan"><strong>Satuan</strong></label>

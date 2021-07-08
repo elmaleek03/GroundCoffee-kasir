@@ -11,11 +11,7 @@
 					<i class="fas fa-fw fa-tachometer-alt"></i>
 					<span>Dashboard</span></a>
 			</li>
-			<li class="nav-item <?= $aktif == 'kasir' ? 'active' : '' ?>">
-				<a class="nav-link" href="<?= base_url('kasir') ?>">
-					<i class="fas fa-fw fa-cash-register"></i>
-					<span>Kasir</span></a>
-			</li>
+
 			<hr class="sidebar-divider">
 
 			<div class="sidebar-heading">
@@ -55,11 +51,19 @@
 			<!-- Divider -->
 			<hr class="sidebar-divider">
 	
-			<?php if ($this->session->login['role'] == 'admin'): ?>
+			
 				<!-- Heading -->
 				<div class="sidebar-heading">
 					Pengaturan
 				</div>
+
+				<li class="nav-item <?= $aktif == 'kasir' ? 'active' : '' ?>">
+				<a class="nav-link" href="<?= base_url('kasir') ?>">
+					<i class="fas fa-fw fa-cash-register"></i>
+					<span>Daftar Kasir</span></a>
+			</li>
+
+			<?php if ($this->session->login['role'] == 'admin'): ?>
 
 				<li class="nav-item <?= $aktif == 'pengguna' ? 'active' : '' ?>">
 					<a class="nav-link" href="<?= base_url('pengguna') ?>">

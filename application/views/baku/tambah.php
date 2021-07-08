@@ -51,7 +51,7 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label for="stok"><strong>Total Pembelian</strong></label>
-											<input type="number" name="stok" placeholder="Masukkan Stok" autocomplete="off"  class="form-control" required>
+											<input type="number" name="stok" placeholder="Masukkan Total Pembelian" autocomplete="off"  class="form-control" required>
 										</div>
 									</div>
 									<div class="form-row">

@@ -45,16 +45,16 @@
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label for="stok"><strong>Jumlah Terjual</strong></label>
-											<input type="number" name="stok" placeholder="Masukkan Stok" autocomplete="off"  class="form-control" required value="<?= $barang->stok ?>">
+											<input type="number" name="stok" placeholder="Masukkan Jumlah Terjual" autocomplete="off"  class="form-control" required value="<?= $barang->stok ?>">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label for="satuan"><strong>Satuan</strong></label>
 											<select name="satuan" id="satuan" class="form-control" required>
-											<option value="">-- Silahkan Pilih --</option>
-												<option value="pcs" <?= $baku->satuan == 'pcs' ? 'selected' : '' ?>>Pcs</option>
-												<option value="box" <?= $baku->satuan == 'sachet' ? 'selected' : '' ?>>Box</option>
-												<option value="kg" <?= $baku->satuan == 'renceng' ? 'selected' : '' ?>>Kg</option>
-												<option value="pack" <?= $baku->satuan == 'pak' ? 'selected' : '' ?>>Pack</option>
+												<option value="">-- Silahkan Pilih --</option>
+												<option value="pcs" <?= $barang->satuan == 'pcs' ? 'selected' : '' ?>>Pcs</option>
+												<option value="box" <?= $barang->satuan == 'box' ? 'selected' : '' ?>>Box</option>
+												<option value="kg" <?= $barang->satuan == 'kg' ? 'selected' : '' ?>>Kg</option>
+												<option value="pack" <?= $barang->satuan == 'pack' ? 'selected' : '' ?>>Pack</option>
 											</select>
 										</div>
 									</div>
