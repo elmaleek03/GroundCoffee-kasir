@@ -44,19 +44,17 @@
 											<input type="number" name="harga_beli" placeholder="Masukkan Harga Beli" autocomplete="off"  class="form-control" required value="<?= $baku->harga_beli ?>">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
-											<label for="stok"><strong>Total Pembelian (Isi Minimal 2!)</strong></label>
+											<label for="stok"><strong>Total Pembelian</strong></label>
 											<input type="number" name="stok" placeholder="Masukkan Stok" autocomplete="off"  class="form-control" required value="<?= $baku->stok ?>">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label for="satuan"><strong>Satuan</strong></label>
 											<select name="satuan" id="satuan" class="form-control" required>
 												<option value="">-- Silahkan Pilih --</option>
-												<option value="pcs" <?= $baku->satuan == 'pcs' ? 'selected' : '' ?>>PCS</option>
-												<option value="sachet" <?= $baku->satuan == 'sachet' ? 'selected' : '' ?>>SACHET</option>
-												<option value="renceng" <?= $baku->satuan == 'renceng' ? 'selected' : '' ?>>RENCENG</option>
-												<option value="pak" <?= $baku->satuan == 'pak' ? 'selected' : '' ?>>PAK</option>
-												<option value="kg" <?= $baku->satuan == 'kg' ? 'selected' : '' ?>>KILOGRAM</option>
-												<option value="ons" <?= $baku->satuan == 'ons' ? 'selected' : '' ?>>ONS</option>
+												<option value="pcs" <?= $baku->satuan == 'pcs' ? 'selected' : '' ?>>Pcs</option>
+												<option value="box" <?= $baku->satuan == 'sachet' ? 'selected' : '' ?>>Box</option>
+												<option value="kg" <?= $baku->satuan == 'renceng' ? 'selected' : '' ?>>Kg</option>
+												<option value="pack" <?= $baku->satuan == 'pak' ? 'selected' : '' ?>>Pack</option>
 											</select>
 										</div>
 									</div>

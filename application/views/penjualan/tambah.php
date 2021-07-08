@@ -95,12 +95,12 @@
 										<table class="table table-bordered" id="keranjang">
 											<thead>
 												<tr>
-													<td width="35%">Nama Barang</td>
-													<td width="15%">Harga</td>
-													<td width="15%">Jumlah</td>
-													<td width="10%">Satuan</td>
-													<td width="10%">Sub Total</td>
-													<td width="15%">Aksi</td>
+													<td width="15%">Nama Barang</td>
+													<td width="7%">Harga</td>
+													<td width="5%">Jumlah</td>
+													<td width="7%">Satuan</td>
+													<td width="7%">Sub Total</td>
+													<td width="10%">Aksi</td>
 												</tr>
 											</thead>
 											<tbody>
@@ -182,9 +182,6 @@
 					sub_total: $('input[name="sub_total"]').val(),
 				}
 
-				if(parseInt($('input[name="max_hidden"]').val()) <= parseInt(data_keranjang.jumlah)) {
-					alert('stok tidak tersedia! stok tersedia : ' + parseInt($('input[name="max_hidden"]').val()))	
-				} else {
 					$.ajax({
 						url: url_keranjang_barang,
 						type: 'POST',
@@ -200,7 +197,7 @@
 							$('input[name="total_hidden"]').val(hitung_total())
 						}
 					})
-				}
+	
 
 			})
 

@@ -23,4 +23,11 @@ class M_pembelian extends CI_Model {
 	public function hapus($no_pembelian){
 		return $this->db->delete($this->_table, ['no_pembelian' => $no_pembelian]);
 	}
+
+public function hitung_total_pembelian()
+{
+   $this->db->select_sum('total');
+   $query = $this->db->get('pembelian');
+     return 0;
+   }
 }

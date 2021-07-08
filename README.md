@@ -1,38 +1,41 @@
 # Aplikasi Kasir Penjualan Dengan Framework CodeIgniter 3 & Template SB Admin 2
 
-### Hello UwU~
+### Link :
 
-Aplikasi kasir penjualan simpel, dibuat untuk keperluan penggunaan toko kedai milik teman saya xD
+https://tubesdpw.000webhostapp.com/
 
-Saya gunakan sebagai **portofolio** juga btw hihi
+### Kenapa saya membuat aplikasi ini?
 
-### Fiturnya apa saja ngab?
-fiturnya sederhana banget, contohnya sebagai berikut
+Ini merupakan aplikasi pertama yang akan saya jadikan sebagai portfolio. Sebenarnya saya sudah banyak membuat banyak aplikasi berbasis web, namun saya lupa membackupnya. Jadi saya harus mengulang lagi dari awal demi portfolio. Selain sebagai portfolio, contoh aplikasi ini juga bisa saya jadikan sebagai latihan untuk mengasah skill koding saya.
+
+### Untuk siapa sih aplikasi ini?
+
+Untuk kalian semua yang mau belajar atau yang butuh inspirasi tentang aplikasi berbasis web terutama yang menggunakan PHP dan MySQL.
+
+### Boleh ga memodifikasi aplikasi ini?
+
+Jawabanya adalah **sangat sangat boleh!**. 
+
+
+### Fiturnya apa saja sih?
+Untuk fiturnya masih sangas sederhana, contohnya sebagai berikut
 1. **Modul Authentikasi**
    
    Di modul ini saya membuat fitur untuk login dan logout.
    
-2. **Modul Data Produk**
+2. **Modul Data Barang**
    
-   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah, menghapus dan meng-ekspor data produk.
+   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah, menghapus dan meng-ekspor data barang.
    
-3. **Modul Data Bahan Baku**
+3. **Modul Data Kasir**
+
+   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah, menghapus dan meng-ekspor data kasir.
    
-   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah, menghapus dan meng-ekspor data bahan baku.
-    
-3. **Modul Transaksi Penjualan**
+4. **Modul Transaksi Penjualan**
 
    Di modul ini saya membuat fitur untuk melihat, menambah, menghapus dan meng-ekspor transaksi penjualan.
 
-4. **Modul Transaksi Pembelian**
-
-   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah, menghapus dan meng-ekspor data transaksi pembelian.
-   
-5. **Modul Data Kasir**
-
-   Di modul ini saya membuat fitur untuk melihat, menambah, mengubah, menghapus dan meng-ekspor data kasir.
-
-6. **Modul Manajemen Akun**
+5. **Modul Manajemen Akun**
 
    Di modul ini saya hanya membuat fitur untuk melihat dan menghapus akun.
 	 
@@ -41,9 +44,9 @@ Terdapat Dua Role yaitu `admin` & `kasir`
 
 ### Instalasi & Konfigurasi
 
-How to :
+Untuk cara instalasi dan konfigurasi caranya sangat mudah
 
-1. Clone repo
+1. Kalian download atau clone repositori ini
 2. Masuk ke folder project ini
 3. Lalu buka terminal dan jalankan `composer install`
 4. Selanjutnya kalian bisa buka file `application/config/config.php` 
@@ -52,3 +55,18 @@ How to :
 7. Import `db/db_penjualan.sql` ke database milik kalian
 8. Untuk login `admin` kalian bisa menggunakan username = `admin` dan password `admin`
 9. Untuk login `kasir` kalian bisa menggunakan username = `kasir` dan password `ksir`
+
+### TUGAS DESAIN PEMOGRAMAN WEB - INSTITUT TELNOLOGI TELKOM PURWOKERTO
+KELAS : S1SE-02-A
+
+KELOMPOK : Group 11
+
+NAMA :
+
+1. FAHMI NUR BAHAQI (18104032)
+2. FAJAR MALIK (18104008)
+3. RIDHO AKBARSYAH RANADHAN (18104020)
+
+PROGRAM STUDI S1 SOFTWARE ENGINEERING FAKULTAS INFORMATIKA
+INSTITUT TEKNOLOGI TELKOM PURWOKERTO 2021
+

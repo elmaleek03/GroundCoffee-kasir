@@ -51,7 +51,7 @@
 										<td>No</td>
 										<td>Kode Produk</td>
 										<td>Nama Produk</td>
-										<td>Harga Jual</td>
+										<td>Harga</td>
 										<td>Jumlah Terjual</td>
 										<?php if ($this->session->login['role'] == 'admin'): ?>
 											<td>Aksi</td>

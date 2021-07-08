@@ -44,19 +44,17 @@
 											<input type="number" name="harga_jual" placeholder="Masukkan Harga Jual" autocomplete="off"  class="form-control" required>
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
-											<label for="stok"><strong>Jumlah Terjual (Isi Minimal 2!)</strong></label>
+											<label for="stok"><strong>Jumlah Terjual</strong></label>
 											<input type="number" name="stok" placeholder="Masukkan Stok" autocomplete="off"  class="form-control" required>
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label for="satuan"><strong>Satuan</strong></label>
 											<select name="satuan" id="satuan" class="form-control" required>
 												<option value="">-- Silahkan Pilih --</option>
-												<option value="pcs">PCS</option>
-												<option value="sachet">SACHET</option>
-												<option value="renceng">RENCENG</option>
-												<option value="pak">PAK</option>
-												<option value="kg">KILOGRAM</option>
-												<option value="ons">ONS</option>
+												<option value="pcs">Pcs</option>
+												<option value="box">Box</option>
+												<option value="kg">Kg</option>
+												<option value="pack">Pack</option>
 											</select>
 										</div>
 									</div>
