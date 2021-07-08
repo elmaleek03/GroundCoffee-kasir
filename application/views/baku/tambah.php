@@ -31,31 +31,23 @@
 							<div class="card-body">
 								<form action="<?= base_url('baku/proses_tambah') ?>" id="form-tambah" method="POST">
 									<div class="form-row">
-										<div class="form-group col-md-6">
+										<div class="form-group col-xs-6 .col-md-10">
 											<label for="kode_baku"><strong>Kode Baku</strong></label>
 											<input type="text" name="kode_baku" placeholder="Masukkan Kode Baku" autocomplete="off"  class="form-control" required value="<?= mt_rand(10000000, 99999999) ?>" maxlength="8" readonly>
 										</div>
-									</div>
-									<div class="form-row">
-										<div class="form-group col-md-6">
+										<div class="form-group col-xs-6 .col-md-10">
 											<label for="nama_baku"><strong>Nama Baku</strong></label>
 											<input type="text" name="nama_baku" placeholder="Masukkan Nama Baku" autocomplete="off"  class="form-control" required>
 										</div>
-									</div>
-									<div class="form-row">
-										<div class="form-group col-md-6">
+										<div class="form-group col-xs-6 .col-md-10">
 											<label for="harga_beli"><strong>Harga</strong></label>
 											<input type="number" name="harga_beli" placeholder="Masukkan Harga Beli" autocomplete="off"  class="form-control" required>
 										</div>
-									</div>
-									<div class="form-row">
-										<div class="form-group col-md-6">
+										<div class="form-group col-xs-6 .col-md-10">
 											<label for="stok"><strong>Total Pembelian</strong></label>
 											<input type="number" name="stok" placeholder="Masukkan Total Pembelian" autocomplete="off"  class="form-control" required>
 										</div>
-									</div>
-									<div class="form-row">
-									<div class="form-group col-md-6">
+									<div class="form-group col-xs-6 .col-md-10">
 											<label for="satuan"><strong>Satuan</strong></label>
 											<select name="satuan" id="satuan" class="form-control" required>
 												<option value="">-- Silahkan Pilih --</option>
