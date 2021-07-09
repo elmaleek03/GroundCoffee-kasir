@@ -36,81 +36,161 @@
 						</button>
 					</div>
 				<?php endif ?>
-				<div class="row">
-
 				
-		            <!-- Earnings (Monthly) Card Example -->
-		            <div class="col-xl-3 col-md-6 mb-4">
-		              <div class="card border-left-primary shadow h-100 py-2">
+
+					<div class="card-header"><strong>Rincian Hari Ini</strong></div>
+						<div class="card-body">
+							<div class="row" >
+
+								<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-danger shadow h-100 py-2">
+									<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Pembelian Hari Ini</div>
+										<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_pembelianperday ?></div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice fa-2x text-gray-300"></i>
+										</div>
+									</div>
+									</div>
+								</div>
+								</div>
+
+								<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-danger shadow h-100 py-2">
+									<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Pengeluaran Hari Ini</div>
+										<div class="h5 mb-0 font-weight-bold text-gray-800">Rp <?= number_format($total_pembeliansumperday, 0, ',', '.')?></div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice-dollar fa-2x text-gray-300"></i>
+										</div>
+									</div>
+									</div>
+								</div>
+								</div>
+
+								<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-success shadow h-100 py-2">
+									<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Penjualan Hari Ini</div>
+										<div class="row no-gutters align-items-center">
+											<div class="col-auto">
+											<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $total_penjualanperday?></div>
+											</div>
+										</div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice fa-2x text-gray-300"></i>
+										</div>
+									</div>
+									</div>
+								</div>
+								</div>
+								
+								<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-success shadow h-100 py-2">
+									<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pemasukan Hari Ini</div>
+										<div class="row no-gutters align-items-center">
+											<div class="col-auto">
+											<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Rp <?= number_format($total_penjualansumperday, 0, ',', '.')?></div>
+											</div>
+										</div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice-dollar fa-2x text-gray-300"></i>
+										</div>
+									</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>				
+					</div>
+
+					<div class="card-header"><strong>Rincian Keseluruhan</strong></div>
+						<div class="card-body">
+							<div class="row" >
+
+							<div class="col-xl-3 col-md-6 mb-4">
+		              <div class="card border-left-danger shadow h-100 py-2">
 		                <div class="card-body">
 		                  <div class="row no-gutters align-items-center">
 		                    <div class="col mr-2">
-		                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Jumlah Produk</div>
-		                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_barang ?></div>
+		                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Total Pembelian</div>
+		                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_pembelian ?></div>
 		                    </div>
 		                    <div class="col-auto">
-		                      <i class="fas fa-box fa-2x text-gray-300"></i>
+		                      <i class="fas fa-file-invoice fa-2x text-gray-300"></i>
 		                    </div>
 		                  </div>
 		                </div>
 		              </div>
 		            </div>
 
-		            <!-- Earnings (Monthly) Card Example -->
-		            <div class="col-xl-3 col-md-6 mb-4">
+							<div class="col-xl-3 col-md-6 mb-4">
+		              <div class="card border-left-danger shadow h-100 py-2">
+		                <div class="card-body">
+		                  <div class="row no-gutters align-items-center">
+		                    <div class="col mr-2">
+		                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Total Pengeluaran</div>
+		                      <div class="h5 mb-0 font-weight-bold text-gray-800"> Rp <?= number_format($total_pembeliansum, 0, ',', '.')?></div>
+		                    </div>
+		                    <div class="col-auto">
+		                      <i class="fas fa-file-invoice-dollar fa-2x text-gray-300"></i>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+
+								<div class="col-xl-3 col-md-6 mb-4">
+									<div class="card border-left-success shadow h-100 py-2">
+										<div class="card-body">
+										<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+											<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Penjualan</div>
+											<div class="row no-gutters align-items-center">
+												<div class="col-auto">
+											<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $total_penjualan ?></div>
+										</div>
+										</div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice fa-2x text-gray-300"></i>
+											</div>
+										</div>
+									</div>							
+								</div>
+							  </div>
+							  
+							  <div class="col-xl-3 col-md-6 mb-4">
 		              <div class="card border-left-success shadow h-100 py-2">
 		                <div class="card-body">
 		                  <div class="row no-gutters align-items-center">
 		                    <div class="col mr-2">
-		                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Jumlah Bahan Baku</div>
-		                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_kasir ?></div>
+		                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Pemasukan</div>
+		                      <div class="h5 mb-0 font-weight-bold text-gray-800"> Rp <?= number_format($total_penjualansum, 0, ',', '.')?></div>
 		                    </div>
 		                    <div class="col-auto">
-		                      <i class="fas fa-box fa-2x text-gray-300"></i>
+		                      <i class="fas fa-file-invoice-dollar fa-2x text-gray-300"></i>
 		                    </div>
 		                  </div>
 		                </div>
 		              </div>
 		            </div>
+						</div>
+					</div>		
 
-		            <!-- Earnings (Monthly) Card Example -->
-		            <div class="col-xl-3 col-md-6 mb-4">
-		              <div class="card border-left-info shadow h-100 py-2">
-		                <div class="card-body">
-		                  <div class="row no-gutters align-items-center">
-		                    <div class="col mr-2">
-		                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Penjualan</div>
-		                      <div class="row no-gutters align-items-center">
-		                        <div class="col-auto">
-		                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $jumlah_penjualan ?></div>
-		                        </div>
-		                      </div>
-		                    </div>
-		                    <div class="col-auto">
-		                      <i class="fas fa-file-invoice fa-2x text-gray-300"></i>
-		                    </div>
-		                  </div>
-		                </div>
-		              </div>
-		            </div>
-
-		            <!-- Pending Requests Card Example -->
-		            <div class="col-xl-3 col-md-6 mb-4">
-		              <div class="card border-left-warning shadow h-100 py-2">
-		                <div class="card-body">
-		                  <div class="row no-gutters align-items-center">
-		                    <div class="col mr-2">
-		                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Jumlah Pembelian</div>
-		                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_pembelian ?></div>
-		                    </div>
-		                    <div class="col-auto">
-		                      <i class="fas fa-file-invoice fa-2x text-gray-300"></i>
-		                    </div>
-		                  </div>
-		                </div>
-		              </div>
-		            </div>
-		          </div>
 
 		        <div class="row">
 		          	<div class="col-md-6">

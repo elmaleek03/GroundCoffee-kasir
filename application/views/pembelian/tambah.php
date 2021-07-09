@@ -42,8 +42,8 @@
 											<input type="text" name="nama_kasir" value="<?= $this->session->login['nama'] ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
-											<label>Tanggal Penjualan</label>
-											<input type="text" name="tgl_pembelian" value="<?= date('d/m/Y') ?>" readonly class="form-control">
+											<label>Tanggal Pembelian</label>
+											<input type="text" name="tgl_pembelian" value="<?= date('Y/m/d') ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label>Jam</label>

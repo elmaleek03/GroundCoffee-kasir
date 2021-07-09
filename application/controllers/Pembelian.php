@@ -14,15 +14,17 @@ class Pembelian extends CI_Controller {
 	}
 
 	public function index(){
-		$this->data['title'] = 'Data Penjualan';
+		$this->data['title'] = 'Data Pembelian';
 		$this->data['all_pembelian'] = $this->m_pembelian->lihat();
-		$this->data['sum'] = $this->m_pembelian->get_sum();
+		$this->data['total_pembeliansum'] = $this->m_pembelian->pembeliansum();
+		$this->data['total_pembeliansumperday'] = $this->m_pembelian->pembeliansumperday();
+		$this->data['jumlahperday'] = $this->m_pembelian->jumlahperday();
 
 		$this->load->view('pembelian/lihat', $this->data);
 	}
 
 	public function tambah(){
-		$this->data['title'] = 'Tambah Penjualan';
+		$this->data['title'] = 'Tambah Pembelian';
 		$this->data['all_baku'] = $this->m_baku->lihat_stok();
 
 		$this->load->view('pembelian/tambah', $this->data);
@@ -63,7 +65,7 @@ class Pembelian extends CI_Controller {
 	}
 
 	public function detail($no_pembelian){
-		$this->data['title'] = 'Detail Penjualan';
+		$this->data['title'] = 'Detail Pembelian';
 		$this->data['pembelian'] = $this->m_pembelian->lihat_no_pembelian($no_pembelian);
 		$this->data['all_detail_pembelian'] = $this->m_detail_pembelian->lihat_no_pembelian($no_pembelian);
 		$this->data['no'] = 1;
@@ -92,19 +94,18 @@ class Pembelian extends CI_Controller {
 	}
 
 
-
 	public function export(){
 		$dompdf = new Dompdf();
 		// $this->data['perusahaan'] = $this->m_usaha->lihat();
 		$this->data['all_pembelian'] = $this->m_pembelian->lihat();
-		$this->data['title'] = 'Laporan Data Penjualan';
+		$this->data['title'] = 'Laporan Data Pembelian';
 		$this->data['no'] = 1;
 
 		$dompdf->setPaper('A4', 'Landscape');
 		$html = $this->load->view('pembelian/report', $this->data, true);
 		$dompdf->load_html($html);
 		$dompdf->render();
-		$dompdf->stream('Laporan Data Penjualan Tanggal ' . date('d F Y'), array("Attachment" => false));
+		$dompdf->stream('Laporan Data Pembelian Tanggal ' . date('d F Y'), array("Attachment" => false));
 	}
 
 	public function export_detail($no_pembelian){
@@ -112,14 +113,14 @@ class Pembelian extends CI_Controller {
 		// $this->data['perusahaan'] = $this->m_usaha->lihat();
 		$this->data['pembelian'] = $this->m_pembelian->lihat_no_pembelian($no_pembelian);
 		$this->data['all_detail_pembelian'] = $this->m_detail_pembelian->lihat_no_pembelian($no_pembelian);
-		$this->data['title'] = 'Laporan Detail Penjualan';
+		$this->data['title'] = 'Laporan Detail Pembelian';
 		$this->data['no'] = 1;
 
 		$dompdf->setPaper('A4', 'Landscape');
 		$html = $this->load->view('pembelian/detail_report', $this->data, true);
 		$dompdf->load_html($html);
 		$dompdf->render();
-		$dompdf->stream('Laporan Detail Penjualan Tanggal ' . date('d F Y'), array("Attachment" => false));
+		$dompdf->stream('Laporan Detail Pembelian Tanggal ' . date('d F Y'), array("Attachment" => false));
 	}
 	
 }

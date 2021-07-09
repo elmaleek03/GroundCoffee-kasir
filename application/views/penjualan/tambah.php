@@ -47,7 +47,7 @@
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label>Tanggal Penjualan</label>
-											<input type="text" name="tgl_penjualan" value="<?= date('d/m/Y') ?>" readonly class="form-control">
+											<input type="text" name="tgl_penjualan" value="<?= date('Y/m/d') ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-xs-6 .col-md-10">
 											<label>Jam</label>
@@ -89,7 +89,7 @@
 										<input type="hidden" name="satuan" value="">
 									</div>
 									<div class="keranjang">
-										<h5>Detail Pembelian</h5>
+										<h5>Detail Penjualan</h5>
 										<hr>
 										<div class="table-responsive">
 										<table class="table table-bordered" id="keranjang">

@@ -16,6 +16,9 @@ class Penjualan extends CI_Controller {
 	public function index(){
 		$this->data['title'] = 'Data Penjualan';
 		$this->data['all_penjualan'] = $this->m_penjualan->lihat();
+		$this->data['total_penjualansum'] = $this->m_penjualan->penjualansum();
+		$this->data['total_penjualansumperday'] = $this->m_penjualan->penjualansum();
+		$this->data['jumlahperday'] = $this->m_penjualan->jumlahperday();
 
 		$this->load->view('penjualan/lihat', $this->data);
 	}

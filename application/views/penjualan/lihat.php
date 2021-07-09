@@ -69,6 +69,12 @@
 								</tbody>
 							</table>
 						</div>
+						<tfoot>
+								<tr>
+									<td colspan="2" align="right"><strong>Total Pemasukan : </strong></td>
+									<td>Rp <?= number_format($total_penjualansum, 0, ',', '.') ?></td>
+								</tr>
+							</tfoot>
 					</div>				
 				</div>
 				</div>
