@@ -68,12 +68,6 @@
 									<?php endforeach ?>
 								</tbody>
 							</table>
-							<tfoot>
-								<tr>
-									<td colspan="2" align="right"><strong>Total Pengeluaran : </strong></td>
-									<td>Rp <?= number_format($total_pembeliansum, 0, ',', '.') ?></td>
-								</tr>
-							</tfoot>
 					</div>				
 
 			<!-- load footer -->
