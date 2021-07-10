@@ -18,7 +18,9 @@ class Pembelian extends CI_Controller {
 		$this->data['all_pembelian'] = $this->m_pembelian->lihat();
 		$this->data['total_pembeliansum'] = $this->m_pembelian->pembeliansum();
 		$this->data['total_pembeliansumperday'] = $this->m_pembelian->pembeliansumperday();
+		$this->data['total_pembeliansumpermonth'] = $this->m_pembelian->pembeliansumpermonth();
 		$this->data['jumlahperday'] = $this->m_pembelian->jumlahperday();
+		$this->data['jumlahpermonth'] = $this->m_pembelian->jumlahpermonth();
 
 		$this->load->view('pembelian/lihat', $this->data);
 	}

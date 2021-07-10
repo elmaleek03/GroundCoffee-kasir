@@ -20,11 +20,15 @@ class Dashboard extends CI_Controller {
 		$this->data['jumlah_kasir'] = $this->m_kasir->jumlah();
 		$this->data['total_penjualan'] = $this->m_penjualan->jumlah();
 		$this->data['total_penjualanperday'] = $this->m_penjualan->jumlahperday();
+		$this->data['total_penjualanpermonth'] = $this->m_penjualan->jumlahpermonth();
 		$this->data['total_pembelian'] = $this->m_pembelian->jumlah();
 		$this->data['total_pembelianperday'] = $this->m_pembelian->jumlahperday();
+		$this->data['total_pembelianpermonth'] = $this->m_pembelian->jumlahpermonth();
 		$this->data['total_pembeliansumperday'] = $this->m_pembelian->pembeliansumperday();
+		$this->data['total_pembeliansumpermonth'] = $this->m_pembelian->pembeliansumpermonth();
 		$this->data['total_pembeliansum'] = $this->m_pembelian->pembeliansum();
 		$this->data['total_penjualansumperday'] = $this->m_penjualan->penjualansumperday();
+		$this->data['total_penjualansumpermonth'] = $this->m_penjualan->penjualansumpermonth();
 		$this->data['total_penjualansum'] = $this->m_penjualan->penjualansum();
 		$this->data['jumlah_pengguna'] = $this->m_pengguna->jumlah();
 		$this->data['toko'] = $this->m_toko->lihat();

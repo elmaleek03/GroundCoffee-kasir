@@ -18,6 +18,12 @@ class M_pembelian extends CI_Model {
 		return $result->row()->jumlah;
 	}
 
+	public function jumlahpermonth(){
+		$sql = "SELECT count(*) as jumlah FROM pembelian WHERE MONTH(`tgl_pembelian`) = MONTH(CURRENT_DATE()) AND YEAR (`tgl_pembelian`) = YEAR(CURRENT_DATE())";
+		$result = $this->db->query($sql);
+		return $result->row()->jumlah;
+	}
+
 	public function lihat_no_pembelian($no_pembelian){
 		return $this->db->get_where($this->_table, ['no_pembelian' => $no_pembelian])->row();
 	}
@@ -38,6 +44,12 @@ class M_pembelian extends CI_Model {
 
 	public function pembeliansumperday(){
 		$sql = "SELECT sum(total) as total FROM pembelian WHERE DATE(`tgl_pembelian`) = CURDATE()";
+		$result = $this->db->query($sql);
+		return $result->row()->total;
+}
+
+	public function pembeliansumpermonth(){
+		$sql = "SELECT sum(total) as total FROM pembelian WHERE MONTH(`tgl_pembelian`) = MONTH(CURRENT_DATE()) AND YEAR (`tgl_pembelian`) = YEAR(CURRENT_DATE())";
 		$result = $this->db->query($sql);
 		return $result->row()->total;
 }

@@ -43,11 +43,11 @@
 							<div class="row" >
 
 								<div class="col-xl-3 col-md-6 mb-4"  >
-									<div class="card border-left-danger shadow h-100 py-2" >
+									<div class="card border-left-warning shadow h-100 py-2" >
 										<div class="card-body" >
 										<div class="row no-gutters align-items-center" >
 											<div class="col mr-2">
-											<div class="text-xs font-weight-bold text-danger text-uppercase mb-1" >Pembelian Hari Ini</div>
+											<div class="text-xs font-weight-bold text-warning text-uppercase mb-1" >Pembelian Hari Ini</div>
 											<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_pembelianperday ?></div>
 											</div>
 											<div class="col-auto">
@@ -75,11 +75,11 @@
 								</div>
 
 								<div class="col-xl-3 col-md-6 mb-4">
-								<div class="card border-left-success shadow h-100 py-2">
+								<div class="card border-left-info shadow h-100 py-2">
 									<div class="card-body">
 									<div class="row no-gutters align-items-center">
 										<div class="col mr-2">
-										<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Penjualan Hari Ini</div>
+										<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Penjualan Hari Ini</div>
 										<div class="row no-gutters align-items-center">
 											<div class="col-auto">
 											<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $total_penjualanperday?></div>
@@ -117,16 +117,95 @@
 						</div>				
 					</div>
 
+					<div class="card-header"><strong>Rincian Bulan Ini</strong></div>
+						<div class="card-body">
+							<div class="row" >
+
+								<div class="col-xl-3 col-md-6 mb-4"  >
+									<div class="card border-left-warning shadow h-100 py-2" >
+										<div class="card-body" >
+										<div class="row no-gutters align-items-center" >
+											<div class="col mr-2">
+											<div class="text-xs font-weight-bold text-warning text-uppercase mb-1" >Pembelian Bulan Ini</div>
+											<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_pembelianpermonth?></div>
+											</div>
+											<div class="col-auto">
+											<i class="fas fa-file-invoice fa-2x text-gray-300"></i>
+											</div>
+										</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-danger shadow h-100 py-2">
+									<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Pengeluaran Bulan Ini</div>
+										<div class="h5 mb-0 font-weight-bold text-gray-800">Rp <?= number_format($total_pembeliansumpermonth, 0, ',', '.')?></div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice-dollar fa-2x text-gray-300"></i>
+										</div>
+									</div>
+									</div>
+								</div>
+								</div>
+
+								<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-info shadow h-100 py-2">
+									<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Penjualan Bulan Ini</div>
+										<div class="row no-gutters align-items-center">
+											<div class="col-auto">
+											<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $total_penjualanpermonth?></div>
+											</div>
+										</div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice fa-2x text-gray-300"></i>
+										</div>
+									</div>
+									</div>
+								</div>
+								</div>
+								
+								<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-success shadow h-100 py-2">
+									<div class="card-body">
+									<div class="row no-gutters align-items-center">
+										<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pemasukan Bulan Ini</div>
+										<div class="row no-gutters align-items-center">
+											<div class="col-auto">
+											<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Rp <?= number_format($total_penjualansumpermonth, 0, ',', '.')?></div>
+											</div>
+										</div>
+										</div>
+										<div class="col-auto">
+										<i class="fas fa-file-invoice-dollar fa-2x text-gray-300"></i>
+										</div>
+									</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>				
+					</div>
+
 					<div class="card-header"><strong>Rincian Keseluruhan</strong></div>
 						<div class="card-body">
 							<div class="row" >
 
 							<div class="col-xl-3 col-md-6 mb-4">
-		              <div class="card border-left-danger shadow h-100 py-2">
+		              <div class="card border-left-warning shadow h-100 py-2">
 		                <div class="card-body">
 		                  <div class="row no-gutters align-items-center">
 		                    <div class="col mr-2">
-		                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Total Pembelian</div>
+		                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Pembelian</div>
 		                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $total_pembelian ?></div>
 		                    </div>
 		                    <div class="col-auto">
@@ -154,11 +233,11 @@
 		            </div>
 
 								<div class="col-xl-3 col-md-6 mb-4">
-									<div class="card border-left-success shadow h-100 py-2">
+									<div class="card border-left-info shadow h-100 py-2">
 										<div class="card-body">
 										<div class="row no-gutters align-items-center">
 										<div class="col mr-2">
-											<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Penjualan</div>
+											<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Penjualan</div>
 											<div class="row no-gutters align-items-center">
 												<div class="col-auto">
 											<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $total_penjualan ?></div>

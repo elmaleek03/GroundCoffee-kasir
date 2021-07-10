@@ -18,6 +18,12 @@ class M_penjualan extends CI_Model {
 		return $result->row()->jumlah;
 	}
 
+	public function jumlahpermonth(){
+		$sql = "SELECT count(*) as jumlah FROM penjualan WHERE MONTH(`tgl_penjualan`) = MONTH(CURRENT_DATE()) AND YEAR (`tgl_penjualan`) = YEAR(CURRENT_DATE())";
+		$result = $this->db->query($sql);
+		return $result->row()->jumlah;
+	}
+
 	public function lihat_no_penjualan($no_penjualan){
 		return $this->db->get_where($this->_table, ['no_penjualan' => $no_penjualan])->row();
 	}
@@ -38,6 +44,12 @@ class M_penjualan extends CI_Model {
 
 	public function penjualansumperday(){
 		$sql = "SELECT sum(total) as total FROM penjualan WHERE DATE(`tgl_penjualan`) = CURDATE()";
+		$result = $this->db->query($sql);
+		return $result->row()->total;
+	}
+
+	public function penjualansumpermonth(){
+		$sql = "SELECT sum(total) as total FROM penjualan WHERE MONTH(`tgl_penjualan`) = MONTH(CURRENT_DATE()) AND YEAR (`tgl_penjualan`) = YEAR(CURRENT_DATE());";
 		$result = $this->db->query($sql);
 		return $result->row()->total;
 	}
